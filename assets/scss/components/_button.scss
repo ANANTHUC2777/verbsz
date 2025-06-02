@@ -1,0 +1,29 @@
+@use "../abstract/" as *;
+.theme__btn {
+  background: $blue;
+  color: $white;
+  padding: 1.5rem;
+  font-family: $popp-medium;
+  border-radius: 4rem;
+  font-size: 2.3rem;
+  line-height: 3.8rem;
+  outline: none;
+  box-shadow: none;
+  border: 1px solid transparent;
+  height: 8.1rem;
+  width: 24.6rem;
+  box-shadow: 1px 3px 2px rgba(7, 7, 7, 0.129);
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+  &:hover{
+    border: 1px solid $blue;
+    background: transparent;
+    color: $blue;
+  }
+}
+@include max-media(991px) {
+  .theme__btn {
+    height: 6.4rem;
+    width: 24.6rem;
+  }
+}

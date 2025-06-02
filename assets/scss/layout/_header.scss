@@ -1,0 +1,15 @@
+@use "../abstract/" as *;
+@use "../components/button" as *;
+@use "../layout/navbar" as *;
+header {
+  height: 8.1rem;
+  margin-top: 5.2rem;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+@include max-media(991px) {
+  header {
+    margin-top: 3.2rem;
+  }
+}

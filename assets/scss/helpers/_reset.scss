@@ -1,0 +1,89 @@
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url("../fonts/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("../fonts/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url("../fonts/Poppins-SemiBold.ttf");
+}
+@font-face {
+  font-family: "HelveticaNeueMedium";
+  src: url("../fonts/Bryant_Medium.otf");
+}
+@font-face {
+  font-family: "Bryant_Medium";
+  src: url("../fonts/Bryant_Medium.otf");
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5% !important;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+@media screen and (max-width: 575px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .container {
+    max-width: 54rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 72rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 96rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 114rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .container {
+    max-width: 132rem;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .container {
+    max-width: 159.8rem;
+  }
+}
