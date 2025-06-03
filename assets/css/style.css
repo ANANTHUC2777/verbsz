@@ -629,6 +629,7 @@ main {
 .help-iconBox {
   display: flex;
   justify-content: space-between;
+  gap: 1rem;
 }
 .help-iconBox-item {
   background: transparent;
