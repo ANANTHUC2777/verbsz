@@ -12,11 +12,15 @@
 }
 @font-face {
   font-family: "HelveticaNeueMedium";
-  src: url("../fonts/Bryant_Medium.otf");
+  src: url("../fonts/HelveticaNeueMedium.otf");
 }
 @font-face {
   font-family: "Bryant_Medium";
   src: url("../fonts/Bryant_Medium.otf");
+}
+@font-face {
+  font-family: "Bryant_Regular";
+  src: url("../fonts/Bryant_Regular.otf");
 }
 *,
 *::after,
@@ -45,6 +49,36 @@ ul {
   margin-right: auto;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+.effect {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease-in-out;
+} /********* RETURN TO TOP *********/
+#return-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #000000;
+  width: 50px;
+  height: 50px;
+  display: block;
+  text-decoration: none;
+  border-radius: 35px;
+  display: none;
+  -webkit-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  z-index: 99;
+  padding-top: 12px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 2.1rem;
+  box-shadow: 0px 1px 6px rgba(51, 60, 127, 0.33);
+}
+#return-to-top:hover {
+  background: #ffffff;
+  color: #000000;
 }
 @media screen and (max-width: 575px) {
   .container {

@@ -12,11 +12,15 @@
 }
 @font-face {
   font-family: "HelveticaNeueMedium";
-  src: url("../fonts/Bryant_Medium.otf");
+  src: url("../fonts/HelveticaNeueMedium.otf");
 }
 @font-face {
   font-family: "Bryant_Medium";
   src: url("../fonts/Bryant_Medium.otf");
+}
+@font-face {
+  font-family: "Bryant_Regular";
+  src: url("../fonts/Bryant_Regular.otf");
 }
 *,
 *::after,
@@ -50,6 +54,40 @@ ul {
   margin-right: auto;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+
+.effect {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease-in-out;
+}
+
+/********* RETURN TO TOP *********/
+#return-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #000000;
+  width: 50px;
+  height: 50px;
+  display: block;
+  text-decoration: none;
+  border-radius: 35px;
+  display: none;
+  -webkit-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  z-index: 99;
+  padding-top: 12px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 2.1rem;
+  box-shadow: 0px 1px 6px rgba(51, 60, 127, 0.33);
+}
+
+#return-to-top:hover {
+  background: #ffffff;
+  color: #000000;
 }
 
 @media screen and (max-width: 575px) {
@@ -119,7 +157,7 @@ ul {
 }
 
 .theme__btn {
-  background: #3CB4E5;
+  background: #3cb4e5;
   color: #ffffff;
   padding: 1.5rem;
   font-family: "Poppins-Medium", sans-serif;
@@ -136,9 +174,9 @@ ul {
   cursor: pointer;
 }
 .theme__btn:hover {
-  border: 1px solid #3CB4E5;
+  border: 1px solid #3cb4e5;
   background: transparent;
-  color: #3CB4E5;
+  color: #3cb4e5;
 }
 
 @media screen and (max-width: 991px) {
@@ -160,7 +198,7 @@ ul {
   font-size: 8rem;
   line-height: 7.5rem;
   font-family: "Poppins-Medium", sans-serif;
-  color: #3CB4E5;
+  color: #3cb4e5;
   display: block;
 }
 .custom-nav .custom-ham {
@@ -172,7 +210,7 @@ ul {
 .custom-nav .custom-ham .bar3 {
   width: 30px;
   height: 2px;
-  background: #3CB4E5;
+  background: #3cb4e5;
   margin: 0 0 6px;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -216,12 +254,15 @@ ul {
   .custom-nav-menu {
     display: block;
     position: absolute;
-    top: 8rem;
+    top: 9.8rem;
     left: 0;
     width: 100%;
+    background: #f9f9f9;
     opacity: 0;
     height: 0;
+    border-top: 4px solid #3cb4e5;
     z-index: 3;
+    padding: 1.8rem;
     visibility: hidden;
     transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out;
   }
@@ -230,7 +271,7 @@ ul {
     align-items: center;
   }
   .custom-nav-menu.active {
-    height: 22.6rem;
+    height: 24.4rem;
     overflow-y: auto;
     opacity: 1;
     visibility: visible;
@@ -249,8 +290,8 @@ ul {
   }
 }
 header {
-  height: 8.1rem;
-  margin-top: 5.2rem;
+  padding-top: 5.2rem;
+  padding-bottom: 2.4rem;
   position: fixed;
   width: 100%;
   z-index: 3;
@@ -258,13 +299,18 @@ header {
 
 @media screen and (max-width: 991px) {
   header {
-    margin-top: 3.2rem;
+    padding-top: 3.2rem;
   }
 }
 main {
   padding-top: 13.3rem;
 }
 
+@media screen and (max-width: 991px) {
+  main {
+    padding-top: 10rem;
+  }
+}
 .banner {
   margin-top: 3.5rem;
   position: relative;
@@ -276,7 +322,7 @@ main {
   background-size: cover;
   content: "";
   width: 102.4rem;
-  top: -16rem;
+  top: -16.5rem;
   right: 0;
   z-index: -1;
 }
@@ -287,14 +333,14 @@ main {
 }
 .banner-leftCol h1 {
   max-width: 43.9rem;
-  color: #0B325F;
+  color: #0b325f;
   font-size: 10rem;
   line-height: 10rem;
   font-family: "Bryant_Medium", sans-serif;
 }
 .banner-leftCol p {
   max-width: 50.5rem;
-  color: #0B325F;
+  color: #0b325f;
   font-size: 1.8rem;
   line-height: 3.2rem;
   font-family: "Poppins-Regular", sans-serif;
@@ -346,7 +392,7 @@ main {
 .banner-rightCol-iconBox-body::after {
   content: "";
   position: absolute;
-  background: #3CB4E5;
+  background: #3cb4e5;
   box-shadow: 0 0.3rem 2.6rem rgba(62, 191, 246, 0.533);
   border-radius: 6rem;
   width: 13rem;
@@ -527,7 +573,7 @@ main {
 .mail-content a {
   background: #ffffff;
   padding: 2rem;
-  color: #3CB4E5;
+  color: #3cb4e5;
   font-family: "Poppins-SemiBold", sans-serif;
   font-size: 3.6rem;
   line-height: 5.5rem;
@@ -551,7 +597,7 @@ main {
   top: 6rem;
 }
 .help-leftTxt h2 {
-  color: #0B325F;
+  color: #0b325f;
   font-size: 7rem;
   line-height: 7.5rem;
   font-family: "Bryant_Medium", sans-serif;
@@ -774,6 +820,7 @@ main {
   background-size: cover;
   width: 45rem;
   height: 100%;
+  bottom: 0;
 }
 .marketing-row {
   display: flex;
@@ -813,6 +860,111 @@ main {
   object-fit: cover;
 }
 
+@media screen and (max-width: 1799px) {
+  .marketing-leftCol {
+    padding: 12rem 1.5rem;
+  }
+
+  .marketing-leftColWrap h4 {
+    max-width: 63.5rem;
+  }
+
+  .marketing-leftColWrap p {
+    max-width: calc(100% - 60px);
+  }
+}
+@media screen and (max-width: 1699px) {
+  .marketing {
+    margin-top: 22rem;
+  }
+}
+@media screen and (max-width: 1399px) {
+  .marketing-leftColWrap h4 {
+    font-size: 6rem;
+  }
+
+  .marketing {
+    margin-top: 26rem;
+  }
+
+  .marketing::before {
+    width: 47rem;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .marketing-row {
+    flex-wrap: wrap;
+  }
+
+  .marketing-leftCol,
+.marketing-rightCol {
+    flex-basis: 100%;
+  }
+
+  .marketing::before,
+.marketing::after {
+    display: none;
+  }
+
+  .marketing {
+    margin-top: 10rem;
+  }
+
+  .marketing-leftCol {
+    order: 2;
+  }
+
+  .marketing-rightCol {
+    order: 1;
+  }
+
+  .marketing-leftColWrap {
+    max-width: 100%;
+  }
+
+  .marketing-leftCol {
+    padding: 12rem;
+  }
+
+  .marketing-leftColWrap h4,
+.marketing-leftColWrap p {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .marketing-leftColWrap .theme__btn {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
+@media screen and (max-width: 767px) {
+  .marketing-leftCol {
+    padding: 5rem;
+  }
+
+  .marketing-leftColWrap h4 {
+    font-size: 5rem;
+  }
+
+  .marketing-leftColWrap p {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (max-width: 575px) {
+  .marketing-leftCol {
+    padding: 3.2rem;
+  }
+
+  .marketing-leftColWrap h4 {
+    font-size: 4.8rem;
+    line-height: 6.4rem;
+  }
+
+  .marketing-leftColWrap p {
+    font-size: 1.7rem;
+  }
+}
 .contact {
   margin-top: 12rem;
   margin-bottom: 7.6rem;
@@ -821,6 +973,7 @@ main {
   display: flex;
   gap: 10.9rem;
   align-items: center;
+  justify-content: center;
 }
 .contact-leftCol {
   background-color: #ffffff;
@@ -896,6 +1049,173 @@ main {
   font-size: 1.9rem;
   line-height: 3.5rem;
   display: block;
+}
+
+@media screen and (max-width: 1399px) {
+  .contact-leftCol h5 {
+    font-size: 5.4rem;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .contact-leftCol h5 {
+    font-size: 4.6rem;
+  }
+
+  .contact-leftCol {
+    padding: 4.5rem;
+  }
+
+  .contact-row {
+    gap: 7.2rem;
+  }
+
+  .contact-rightCol h6 {
+    font-size: 3.4rem;
+    line-height: 5.4rem;
+  }
+}
+@media screen and (max-width: 991px) {
+  .contact-row {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 575px) {
+  .contact-leftCol h5 {
+    font-size: 4rem;
+    line-height: 5.4rem;
+  }
+
+  .contact-leftCol {
+    padding: 3rem;
+    border-radius: 2rem;
+  }
+
+  .contact-box {
+    flex-wrap: wrap;
+  }
+
+  .contact-box:nth-child(3) {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+}
+.project {
+  padding-top: 5.2rem;
+  padding-bottom: 7.9rem;
+  background-color: #001831;
+  position: relative;
+}
+.project::before {
+  background: url("../img/left-bubb.png") no-repeat center;
+  background-size: cover;
+  width: 44rem;
+  height: calc(100% - 218px);
+  right: 0;
+  top: 0;
+  position: absolute;
+  content: "";
+}
+.project::after {
+  background: url("../img/right-bubb.png") no-repeat center;
+  background-size: cover;
+  width: 44rem;
+  height: calc(100% - 218px);
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  content: "";
+}
+.project-row {
+  position: relative;
+  z-index: 1;
+}
+.project-row h6 {
+  color: #ffffff;
+  font-family: "Bryant_Medium", sans-serif;
+  font-size: 7rem;
+  line-height: 7.5rem;
+  text-align: center;
+}
+.project-row p {
+  color: #ffffff;
+  font-family: "Poppins-Regular", sans-serif;
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  margin-bottom: 4.8rem;
+  text-align: center;
+  max-width: 59.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.project-imgWrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 3.1rem;
+}
+.project-img-item {
+  padding: 3.8rem 4.2rem;
+  border-radius: 4rem;
+}
+.project-img-item p {
+  color: #000000;
+  font-family: "Bryant_Regular", sans-serif;
+  font-size: 2.6rem;
+  line-height: 3.2rem;
+}
+.project-img-item:nth-child(1), .project-img-item:nth-child(2), .project-img-item:nth-child(3) {
+  background-size: cover !important;
+  height: 47.7rem;
+  width: 100%;
+}
+.project-img-item:nth-child(1) {
+  background: url("../img/mark-1.webp") no-repeat center;
+}
+.project-img-item:nth-child(2) {
+  background: url("../img/mark-2.webp") no-repeat center;
+}
+.project-img-item:nth-child(3) {
+  background: url("../img/mark-3.webp") no-repeat center;
+}
+.project .theme__btn {
+  margin: 4.2rem auto 0;
+  display: block;
+}
+
+@media screen and (max-width: 1399px) {
+  .project-img-item p {
+    font-size: 2.4rem;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .project-img-item p {
+    font-size: 2rem;
+  }
+
+  .project-img-item {
+    padding: 2.8rem;
+  }
+
+  .project::before,
+.project::after {
+    display: none;
+  }
+}
+@media screen and (max-width: 991px) {
+  .project-imgWrap {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 767px) {
+  .project-row h6 {
+    font-size: 5.4rem;
+  }
+}
+@media screen and (max-width: 575px) {
+  .project-row h6 {
+    font-size: 4.8rem;
+    line-height: 5.6rem;
+    margin-bottom: 1.6rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

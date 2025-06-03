@@ -83,20 +83,23 @@
   .custom-nav-menu {
     display: block;
     position: absolute;
-    top: 8rem;
+    top: 9.8rem;
     left: 0;
     width: 100%;
+    background: #f9f9f9;
     opacity: 0;
     height: 0;
+    border-top: 4px solid $blue;
     z-index: 3;
+    padding: 1.8rem;
     visibility: hidden;
-    transition: height 0.5s ease-in-out,opacity .5s ease-in-out;
+    transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out;
     ul {
       flex-direction: column;
       align-items: center;
     }
     &.active {
-      height: 22.6rem;
+      height: 24.4rem;
       overflow-y: auto;
       opacity: 1;
       visibility: visible;

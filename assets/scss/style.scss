@@ -2,11 +2,15 @@
 @use "helpers/reset" as *;
 @use "helpers/hamburger" as *;
 @use "layout/header" as *;
-@use "layout/footer" as *;
 @use "components/button" as *;
 
 main {
   padding-top: 13.3rem;
+}
+@include max-media(991px) {
+  main {
+    padding-top: 10rem;
+  }
 }
 .banner {
   margin-top: 3.5rem;
@@ -18,7 +22,7 @@ main {
     background-size: cover;
     content: "";
     width: 102.4rem;
-    top: -16rem;
+    top: -16.5rem;
     right: 0;
     z-index: -1;
   }
@@ -486,6 +490,7 @@ main {
     background-size: cover;
     width: 45rem;
     height: 100%;
+    bottom: 0;
   }
   &-row {
     display: flex;
@@ -527,6 +532,95 @@ main {
     }
   }
 }
+@include max-media(1799px) {
+  .marketing-leftCol {
+    padding: 12rem 1.5rem;
+  }
+
+  .marketing-leftColWrap h4 {
+    max-width: 63.5rem;
+  }
+  .marketing-leftColWrap p {
+    max-width: calc(100% - 60px);
+  }
+}
+@include max-media(1699px) {
+  .marketing {
+    margin-top: 22rem;
+  }
+}
+@include max-media(1399px) {
+  .marketing-leftColWrap h4 {
+    font-size: 6rem;
+  }
+  .marketing {
+    margin-top: 26rem;
+  }
+  .marketing::before {
+    width: 47rem;
+  }
+}
+@include max-media(1199px) {
+  .marketing-row {
+    flex-wrap: wrap;
+  }
+  .marketing-leftCol,
+  .marketing-rightCol {
+    flex-basis: 100%;
+  }
+  .marketing::before,
+  .marketing::after {
+    display: none;
+  }
+  .marketing {
+    margin-top: 10rem;
+  }
+  .marketing-leftCol {
+    order: 2;
+  }
+  .marketing-rightCol {
+    order: 1;
+  }
+  .marketing-leftColWrap {
+    max-width: 100%;
+  }
+  .marketing-leftCol {
+    padding: 12rem;
+  }
+  .marketing-leftColWrap h4,
+  .marketing-leftColWrap p {
+    text-align: center;
+    max-width: 100%;
+  }
+  .marketing-leftColWrap .theme__btn {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
+@include max-media(767px) {
+  .marketing-leftCol {
+    padding: 5rem;
+  }
+  .marketing-leftColWrap h4 {
+    font-size: 5rem;
+  }
+  .marketing-leftColWrap p {
+    font-size: 1.7rem;
+  }
+}
+@include max-media(575px) {
+  .marketing-leftCol {
+    padding: 3.2rem;
+  }
+  .marketing-leftColWrap h4 {
+    font-size: 4.8rem;
+    line-height: 6.4rem;
+  }
+  .marketing-leftColWrap p {
+    font-size: 1.7rem;
+  }
+}
 .contact {
   margin-top: 12rem;
   margin-bottom: 7.6rem;
@@ -534,6 +628,7 @@ main {
     display: flex;
     gap: 10.9rem;
     align-items: center;
+    justify-content: center;
   }
   &-leftCol {
     background-color: $white;
@@ -558,7 +653,7 @@ main {
       line-height: 2.8rem;
       margin-bottom: 3.5rem;
     }
-    .theme__btn{
+    .theme__btn {
       margin-left: auto;
       margin-right: auto;
       display: block;
@@ -592,9 +687,9 @@ main {
   &-box {
     display: flex;
     gap: 2.8rem;
-    &:nth-child(3){
-     margin-top: 9.3rem;
-     margin-bottom: 9.3rem;
+    &:nth-child(3) {
+      margin-top: 9.3rem;
+      margin-bottom: 9.3rem;
     }
     &-img {
       img {
@@ -617,5 +712,164 @@ main {
         display: block;
       }
     }
+  }
+}
+@include max-media(1399px) {
+  .contact-leftCol h5 {
+    font-size: 5.4rem;
+  }
+}
+@include max-media(1199px) {
+  .contact-leftCol h5 {
+    font-size: 4.6rem;
+  }
+  .contact-leftCol {
+    padding: 4.5rem;
+  }
+  .contact-row {
+    gap: 7.2rem;
+  }
+  .contact-rightCol h6 {
+    font-size: 3.4rem;
+    line-height: 5.4rem;
+  }
+}
+@include max-media(991px) {
+  .contact-row {
+    flex-wrap: wrap;
+  }
+}
+@include max-media(575px) {
+  .contact-leftCol h5 {
+    font-size: 4rem;
+    line-height: 5.4rem;
+  }
+  .contact-leftCol {
+    padding: 3rem;
+    border-radius: 2rem;
+  }
+  .contact-box {
+    flex-wrap: wrap;
+  }
+  .contact-box:nth-child(3) {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+}
+.project {
+  padding-top: 5.2rem;
+  padding-bottom: 7.9rem;
+  background-color: #001831;
+  position: relative;
+  &::before {
+    background: url("../img/left-bubb.png") no-repeat center;
+    background-size: cover;
+    width: 44rem;
+    height: calc(100% - 218px);
+    right: 0;
+    top: 0;
+    position: absolute;
+    content: "";
+  }
+  &::after {
+    background: url("../img/right-bubb.png") no-repeat center;
+    background-size: cover;
+    width: 44rem;
+    height: calc(100% - 218px);
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    content: "";
+  }
+  &-row {
+    position: relative;
+    z-index: 1;
+    h6 {
+      color: $white;
+      font-family: $bry_medium;
+      font-size: 7rem;
+      line-height: 7.5rem;
+      text-align: center;
+    }
+    p {
+      color: $white;
+      font-family: $popp-reg;
+      font-size: 1.8rem;
+      line-height: 3.2rem;
+      margin-bottom: 4.8rem;
+      text-align: center;
+      max-width: 59.5rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  &-imgWrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 3.1rem;
+  }
+  &-img-item {
+    padding: 3.8rem 4.2rem;
+    border-radius: 4rem;
+    p {
+      color: $black;
+      font-family: $bry_reg;
+      font-size: 2.6rem;
+      line-height: 3.2rem;
+    }
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+      background-size: cover !important;
+      height: 47.7rem;
+      width: 100%;
+    }
+    &:nth-child(1) {
+      background: url("../img/mark-1.webp") no-repeat center;
+    }
+    &:nth-child(2) {
+      background: url("../img/mark-2.webp") no-repeat center;
+    }
+    &:nth-child(3) {
+      background: url("../img/mark-3.webp") no-repeat center;
+    }
+  }
+  .theme__btn {
+    margin: 4.2rem auto 0;
+    display: block;
+  }
+}
+@include max-media(1399px) {
+  .project-img-item p {
+    font-size: 2.4rem;
+  }
+}
+@include max-media(1199px) {
+  .project-img-item p {
+    font-size: 2rem;
+  }
+  .project-img-item {
+    padding: 2.8rem;
+  }
+  .project::before,
+  .project::after {
+    display: none;
+  }
+}
+@include max-media(991px) {
+  .project-imgWrap {
+    flex-wrap: wrap;
+  }
+}
+@include max-media(767px) {
+  .project-row h6 {
+    font-size: 5.4rem;
+  }
+}
+@include max-media(575px) {
+  .project-row h6 {
+    font-size: 4.8rem;
+    line-height: 5.6rem;
+    margin-bottom: 1.6rem;
   }
 }
