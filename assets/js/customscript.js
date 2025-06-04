@@ -118,14 +118,73 @@ document.addEventListener("DOMContentLoaded", function () {
     delay: 1.5,
   });
 
-  //help
+  //mail
   gsap.from(".mail-content", {
     x: 100,
     opacity: 0,
     duration: 1.5,
     ease: "power3.out",
-    delay: 1.5,
+    delay: 0.2,
+    scrollTrigger: {
+      trigger: ".mail",
+      scroller: "body",
+      //markers: true,
+      start: "top center",
+      end: "bottom top",
+    },
   });
 
-  // marketing
+  // help
+  const helptl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".help",
+      // markers: "true",
+      start: "top center",
+      end: "bottom top",
+    },
+  });
+  helptl
+    .from(".help", {
+      y: 100,
+      duration: 0.5,
+      ease: "power3.out",
+      opacity: 0,
+    })
+    .from(".help-leftTxt", {
+      y: 100,
+      duration: 0.5,
+      ease: "power3.out",
+      opacity: 0,
+    })
+    .from(".help-contentTxt", {
+      y: 100,
+      duration: 0.5,
+      ease: "power3.out",
+      opacity: 0,
+    })
+    .from(".help-contentTxt .theme__btn", {
+      y: 100,
+      duration: 0.5,
+      ease: "power3.out",
+      opacity: 0,
+    });
+
+  //Box
+  const helpIconBox = document.querySelectorAll(".help-iconBox-item");
+
+  helpIconBox.forEach((el, i) => {
+    gsap.from(el, {
+      y: 100,
+      opacity: 0,
+      duration: 1.5,
+      ease: "power3.out",
+      delay: i * 0.18,
+      scrollTrigger: {
+        trigger: ".help-contentTxt",
+        markers: "true",
+        start: "top 400",
+        end: "bottom 450",
+      },
+    });
+  });
 });
