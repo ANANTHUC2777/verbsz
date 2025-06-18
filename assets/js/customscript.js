@@ -129,8 +129,8 @@ document.addEventListener("DOMContentLoaded", function () {
       trigger: ".mail",
       scroller: "body",
       //markers: true,
-      start: "top center",
-      end: "bottom top",
+      start: "top 50%",
+      end: "bottom 10%",
     },
   });
 
@@ -147,44 +147,70 @@ document.addEventListener("DOMContentLoaded", function () {
     .from(".help", {
       y: 100,
       duration: 0.5,
-      ease: "power3.out",
+      ease: "power1.out",
       opacity: 0,
     })
     .from(".help-leftTxt", {
       y: 100,
       duration: 0.5,
-      ease: "power3.out",
+      ease: "power1.out",
       opacity: 0,
     })
     .from(".help-contentTxt", {
       y: 100,
       duration: 0.5,
-      ease: "power3.out",
+      ease: "power1.out",
       opacity: 0,
     })
     .from(".help-contentTxt .theme__btn", {
       y: 100,
       duration: 0.5,
-      ease: "power3.out",
+      ease: "power1.out",
       opacity: 0,
     });
 
   //Box
   const helpIconBox = document.querySelectorAll(".help-iconBox-item");
-
   helpIconBox.forEach((el, i) => {
     gsap.from(el, {
       y: 100,
       opacity: 0,
-      duration: 1.5,
+      duration: 0.5,
       ease: "power3.out",
       delay: i * 0.18,
       scrollTrigger: {
-        trigger: ".help-contentTxt",
-        markers: "true",
-        start: "top 400",
-        end: "bottom 450",
+        trigger: ".help",
+        scroller: "body",
+        //markers: "true",
+        start: "top 80%",
+        end: "bottom 50%",
       },
     });
+  });
+
+  //marketing
+  const marketingtl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".marketing",
+      markers: "true",
+      start: "top 50%",
+      end: "bottom top",
+    },
+  });
+  marketingtl.from(".marketing-leftColWrap h4", {
+    y: 200,
+    opacity: 0,
+    duration: 0.5,
+    ease: "power1.out",
+  }).from(".marketing-leftColWrap p", {
+    y: 200,
+    opacity: 0,
+    duration: 0.5,
+    ease: "power1.out",
+  }).from(".marketing-leftColWrap .theme__btn", {
+    y: 200,
+    opacity: 0,
+    duration: 0.5,
+    ease: "power1.out",
   });
 });
