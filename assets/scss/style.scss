@@ -874,3 +874,14 @@ main {
     margin-bottom: 1.6rem;
   }
 }
+.cursor {
+      background-color: rgba(62, 191, 246, 0.533);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      z-index: 9;
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none; 
+    }

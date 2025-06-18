@@ -141,6 +141,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // markers: "true",
       start: "top center",
       end: "bottom top",
+      scroller: "body",
     },
   });
   helptl
@@ -170,14 +171,32 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   //Box
-  const helpIconBox = document.querySelectorAll(".help-iconBox-item");
-  helpIconBox.forEach((el, i) => {
-    gsap.from(el, {
-      y: 100,
-      opacity: 0,
-      duration: 0.5,
+  // const helpIconBox = document.querySelectorAll(".help-iconBox-item");
+  // helpIconBox.forEach((el, i) => {
+  //   gsap.from(el, {
+  //     y: 100,
+  //     opacity: 0,
+  //     duration: 0.5,
+  //     ease: "power3.out",
+  //     delay: i * 0.18,
+  //     scrollTrigger: {
+  //       trigger: ".help",
+  //       scroller: "body",
+  //       //markers: "true",
+  //       start: "top 80%",
+  //       end: "bottom 50%",
+  //     },
+  //   });
+  // });
+  gsap.fromTo(
+    ".help-iconBox-item",
+    { opacity: 0, y: 400 },
+    {
+      stagger: 0.3,
+      opacity: 1,
+      y: 0,
+      duration: 1,
       ease: "power3.out",
-      delay: i * 0.18,
       scrollTrigger: {
         trigger: ".help",
         scroller: "body",
@@ -185,32 +204,113 @@ document.addEventListener("DOMContentLoaded", function () {
         start: "top 80%",
         end: "bottom 50%",
       },
-    });
-  });
+    }
+  );
 
   //marketing
   const marketingtl = gsap.timeline({
     scrollTrigger: {
       trigger: ".marketing",
-      markers: "true",
+      // markers: "true",
       start: "top 50%",
       end: "bottom top",
+      scroller: "body",
     },
   });
-  marketingtl.from(".marketing-leftColWrap h4", {
+  marketingtl
+    .from(".marketing-leftColWrap h4", {
+      y: 200,
+      opacity: 0,
+      duration: 0.5,
+      ease: "power1.out",
+    })
+    .from(".marketing-leftColWrap p", {
+      y: 200,
+      opacity: 0,
+      duration: 0.5,
+      ease: "power1.out",
+    })
+    .from(".marketing-leftColWrap .theme__btn", {
+      y: 200,
+      opacity: 0,
+      duration: 0.5,
+      ease: "power1.out",
+    });
+});
+//contact
+const contacttl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".contact",
+    //  markers: "true",
+    start: "top 50%",
+    end: "bottom top",
+    scroller: "body",
+  },
+});
+contacttl
+  .from(".contact-leftCol", { autoAlpha: 0, y: -200 }, { autoAlpha: 1, y: 0, duration: 1 })
+  .from(".contact-leftCol h5", {
     y: 200,
     opacity: 0,
     duration: 0.5,
     ease: "power1.out",
-  }).from(".marketing-leftColWrap p", {
+  })
+  .from(".contact-leftCol p", {
     y: 200,
     opacity: 0,
     duration: 0.5,
     ease: "power1.out",
-  }).from(".marketing-leftColWrap .theme__btn", {
+  })
+  .from(".contact-inputs", {
     y: 200,
     opacity: 0,
     duration: 0.5,
     ease: "power1.out",
+    stagger: 0.2,
+  })
+  .from(".contact-leftCol .theme__btn", {
+    y: 200,
+    opacity: 0,
+    duration: 0.5,
+    ease: "power1.out",
+  })
+  .fromTo(".contact-rightCol", { autoAlpha: 0, y: -200 }, { autoAlpha: 1, y: 0, duration: 1 })
+  .from(".contact-box", {
+    y: 200,
+    opacity: 0,
+    duration: 0.5,
+    ease: "power1.out",
+    stagger: 0.2,
+  });
+//project
+const projecttl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".project",
+    //  markers: "true",
+    start: "top 50%",
+    end: "bottom top",
+    scroller: "body",
+  },
+});
+projecttl
+  .from(".project-row>*", {
+    y: 200,
+    opacity: 0,
+    duration: 0.5,
+    ease: "power1.out",
+    stagger: 0.2,
+  })
+  .fromTo(".project-img-item", { autoAlpha: 0, y: 400 }, { stagger: 0.3, autoAlpha: 1, y: 0, duration: 1 });
+
+const cursor = document.querySelector(".cursor");
+const bdyWrap = document.querySelector("main");
+bdyWrap.addEventListener("mousemove", (dets) => {
+  console.log(dets);
+
+  gsap.to(".cursor", {
+    y: dets.y,
+    x: dets.x,
+    duration: 0.3,
+    ease: "power3.out",
   });
 });

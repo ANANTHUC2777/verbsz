@@ -60,9 +60,7 @@ ul {
   background: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(10px);
   transition: all 0.3s ease-in-out;
-}
-
-/********* RETURN TO TOP *********/
+} /********* RETURN TO TOP *********/
 #return-to-top {
   position: fixed;
   bottom: 20px;
@@ -270,15 +268,12 @@ ul {
     opacity: 1;
     visibility: visible;
   }
-
   .custom-nav .custom-ham {
     display: block;
   }
-
   .custom-nav-menu ul {
     gap: 2rem;
   }
-
   .custom-nav-logo a {
     font-size: 6.4rem;
   }
@@ -414,12 +409,10 @@ main {
     width: 100rem;
     height: 85rem;
   }
-
   .banner-leftCol h1 {
     font-size: 8rem;
     line-height: 8.4rem;
   }
-
   .banner-leftCol p {
     max-width: 41.5rem;
   }
@@ -429,25 +422,20 @@ main {
     width: 77rem;
     height: 66rem;
   }
-
   .banner-rightCol-img {
     max-width: 45rem;
   }
-
   .banner-rightCol-iconBox-body {
     width: 18rem;
     height: 20.6rem;
   }
-
   .banner-rightCol-iconBox:nth-child(2) {
     top: 12rem;
   }
-
   .banner-rightCol-iconBox-body {
     width: 17rem;
     height: 18.6rem;
   }
-
   .banner-rightCol-iconBox-body::after {
     width: 11rem;
   }
@@ -456,48 +444,39 @@ main {
   .banner::after {
     display: none;
   }
-
   .banner-row {
     flex-wrap: wrap;
     justify-content: center;
     gap: 9.6rem;
   }
-
   .banner-leftCol {
     order: 2;
     flex-basis: 100%;
   }
-
   .banner-rightCol {
     order: 1;
     flex-basis: 100%;
   }
-
   .banner-leftCol p {
     max-width: 100%;
   }
-
   .banner-rightCol-img {
     max-width: 100%;
   }
-
   .banner-rightCol-img img {
     border-radius: 12rem;
     width: 100%;
   }
-
   .banner-rightCol-iconBox:nth-child(2) {
     top: unset;
     left: 5rem;
     bottom: 4rem;
   }
-
   .banner-rightCol-iconBox:nth-child(3) {
     bottom: 4rem;
     left: unset;
     right: 8rem;
   }
-
   .banner-rightCol-iconBox-body::after {
     width: 10rem;
   }
@@ -506,13 +485,11 @@ main {
   .banner-rightCol-img img {
     border-radius: 6rem;
   }
-
   .banner-rightCol-iconBox:nth-child(3) {
     bottom: -4rem;
     left: unset;
     right: 4rem;
   }
-
   .banner-rightCol-iconBox:nth-child(2) {
     bottom: -4rem;
   }
@@ -522,29 +499,23 @@ main {
     font-size: 6rem;
     line-height: 7.4rem;
   }
-
   .banner-rightCol-iconBox-img {
     max-width: 5.8rem;
   }
-
   .banner-rightCol-iconBox-body {
     width: 13rem;
     height: 13rem;
     border-radius: 3rem;
   }
-
   .banner-rightCol-iconBox:nth-child(2) {
     left: 0;
   }
-
   .banner-rightCol-iconBox:nth-child(3) {
     right: 0;
   }
-
   .banner-rightCol-iconBox-txt p {
     font-size: 1.2rem;
   }
-
   .banner-rightCol-iconBox-body::after {
     width: 8rem;
   }
@@ -718,12 +689,10 @@ main {
   .help-contentWrap {
     max-width: 116rem;
   }
-
   .help-leftTxt h2 {
     font-size: 6rem;
     line-height: 6.8rem;
   }
-
   .help-contentTxt {
     max-width: 92.4rem;
   }
@@ -733,16 +702,13 @@ main {
     max-width: 98rem;
     padding: 4rem;
   }
-
   .help-iconBox-item {
     border-radius: 2rem;
   }
-
   .help-contentTxt p {
     max-width: 48rem;
     margin-left: auto;
   }
-
   .help-iconBox {
     gap: 1.6rem;
   }
@@ -754,21 +720,17 @@ main {
     max-width: 62rem;
     flex-wrap: wrap;
   }
-
   .help-contentWrap {
     max-width: 81rem;
     height: auto;
   }
-
   .help-contentTxt {
     max-width: 58.4rem;
     flex-wrap: wrap;
   }
-
   .help-leftTxt {
     top: 5rem;
   }
-
   .help-contentTxt p {
     max-width: 100%;
     margin-bottom: 2.4rem;
@@ -781,20 +743,18 @@ main {
     position: relative;
     margin-bottom: 2.4rem;
   }
-
   .help-leftTxt h2 {
     max-width: 100%;
   }
-
   .help-contentTxt {
     max-width: 67.4rem;
   }
 }
 @media screen and (max-width: 767px) {
   .help-iconBox-itemBody p,
-.help-iconBox,
-.help-iconBox-itemHead h3,
-.help-iconBox-item {
+  .help-iconBox,
+  .help-iconBox-itemHead h3,
+  .help-iconBox-item {
     max-width: 100%;
   }
 }
@@ -859,11 +819,9 @@ main {
   .marketing-leftCol {
     padding: 12rem 1.5rem;
   }
-
   .marketing-leftColWrap h4 {
     max-width: 63.5rem;
   }
-
   .marketing-leftColWrap p {
     max-width: calc(100% - 60px);
   }
@@ -877,11 +835,9 @@ main {
   .marketing-leftColWrap h4 {
     font-size: 6rem;
   }
-
   .marketing {
     margin-top: 26rem;
   }
-
   .marketing::before {
     width: 47rem;
   }
@@ -890,43 +846,34 @@ main {
   .marketing-row {
     flex-wrap: wrap;
   }
-
   .marketing-leftCol,
-.marketing-rightCol {
+  .marketing-rightCol {
     flex-basis: 100%;
   }
-
   .marketing::before,
-.marketing::after {
+  .marketing::after {
     display: none;
   }
-
   .marketing {
     margin-top: 10rem;
   }
-
   .marketing-leftCol {
     order: 2;
   }
-
   .marketing-rightCol {
     order: 1;
   }
-
   .marketing-leftColWrap {
     max-width: 100%;
   }
-
   .marketing-leftCol {
     padding: 12rem;
   }
-
   .marketing-leftColWrap h4,
-.marketing-leftColWrap p {
+  .marketing-leftColWrap p {
     text-align: center;
     max-width: 100%;
   }
-
   .marketing-leftColWrap .theme__btn {
     margin-left: auto;
     margin-right: auto;
@@ -937,11 +884,9 @@ main {
   .marketing-leftCol {
     padding: 5rem;
   }
-
   .marketing-leftColWrap h4 {
     font-size: 5rem;
   }
-
   .marketing-leftColWrap p {
     font-size: 1.7rem;
   }
@@ -950,12 +895,10 @@ main {
   .marketing-leftCol {
     padding: 3.2rem;
   }
-
   .marketing-leftColWrap h4 {
     font-size: 4.8rem;
     line-height: 6.4rem;
   }
-
   .marketing-leftColWrap p {
     font-size: 1.7rem;
   }
@@ -1055,15 +998,12 @@ main {
   .contact-leftCol h5 {
     font-size: 4.6rem;
   }
-
   .contact-leftCol {
     padding: 4.5rem;
   }
-
   .contact-row {
     gap: 7.2rem;
   }
-
   .contact-rightCol h6 {
     font-size: 3.4rem;
     line-height: 5.4rem;
@@ -1079,16 +1019,13 @@ main {
     font-size: 4rem;
     line-height: 5.4rem;
   }
-
   .contact-leftCol {
     padding: 3rem;
     border-radius: 2rem;
   }
-
   .contact-box {
     flex-wrap: wrap;
   }
-
   .contact-box:nth-child(3) {
     margin-top: 4rem;
     margin-bottom: 4rem;
@@ -1185,13 +1122,11 @@ main {
   .project-img-item p {
     font-size: 2rem;
   }
-
   .project-img-item {
     padding: 2.8rem;
   }
-
   .project::before,
-.project::after {
+  .project::after {
     display: none;
   }
 }
@@ -1211,6 +1146,17 @@ main {
     line-height: 5.6rem;
     margin-bottom: 1.6rem;
   }
+}
+.cursor {
+  background-color: rgba(62, 191, 246, 0.533);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  z-index: 9;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
 }
 
 /*# sourceMappingURL=style.css.map */
